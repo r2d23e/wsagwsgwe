@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+$tc3: #242121;
+$bg: #F8F8F8;
+$bt: #01353E;
+$w: #ffffff;
+$tc2: #0D302C;
+$tc1: #ffffff;
+$shadow: linear-gradient(180deg, #01353E 0%, rgba(51, 51, 51, 0.595076) 31.64%, rgba(51, 51, 51, 0.222586) 74.35%, rgba(51, 51, 51, 0) 99.87%);
+
+@font-face {
+    font-family: robot;
+    src: url(../font/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../font/Raleway-Regular.ttf);
+}
+
+@mixin text1 {
+    font-family: robot;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #ffffff;
+    line-height: 100px;
+
+}
+
+@mixin text2 {
+    font-family: raleway;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+
+    line-height: 100px;
+
+}
+
+@mixin textb {
+    font-family: raleway;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 235px;
+}
+
+@mixin text3($ff, $fs, $fw, $lh, $btt) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $btt;
+}
+
+@mixin for_p {
+    font-family: robot;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 18px;
+    text-align: left;
+    color: $tc3;
+
+}
+
+.wrap {
+    width: 100%;
+
+
+    .hed {
+        width: 100%;
+        position: fixed;
+        z-index: 5;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .navbar ul {
+            width: 1000px;
+            display: flex;
+            justify-content: space-evenly;
+
+            li {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                color: $tc1;
+
+                a {
+
+                    cursor: crosshair;
+                    @include text1;
+                }
+            }
+        }
+    }
+
+    .box1 {
+        width: 100%;
+        height: 1080px;
+
+
+        .shadov {
+            position: absolute;
+            width: 100%;
+            height: 700px;
+            background: $shadow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .con1 {
+                position: absolute;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                height: 700px;
+
+                .img2 {
+                    position: absolute;
+                    top: 950px;
+                }
+
+                .text {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .school {
+                        @include text2;
+                    }
+
+                    .wawe {
+                        @include textb;
+                    }
+                }
+            }
+        }
+    }
+
+    .box2 {
+        width: 100%;
+        height: 1000px;
+
+
+        .title {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+        }
+
+        .textbox {
+            position: relative;
+            top: 15%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .text1 {
+                position: relative;
+
+
+                width: 20%;
+                height: 650px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+
+
+                p {
+                    @include for_p;
+                }
+            }
+
+            .text2 {
+                position: relative;
+
+                width: 20%;
+                height: 650px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+
+
+                p {
+                    @include for_p;
+                }
+            }
+        }
+
+        .h21 {
+            @include text3(raleway, 48px, 600, 56px, $bt)
+        }
+    }
+
+    .box3 {
+        width: 100%;
+        height: 1000px;
+        background-color: $bg;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+
+            .h21 {
+                @include text3(raleway, 48px, 600, 56px, $bt)
+            }
+        }
+
+        .up {
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            left: 10%;
+            top: 20%;
+
+            .one {
+                display: flex;
+                align-items: center;
+                @include text3(robot, 24px, 400, 28px, $tc3 )
+            }
+
+            .two {
+                display: flex;
+                align-items: center;
+                @include text3(robot, 24px, 400, 28px, $tc3 )
+            }
+
+            .three {
+                display: flex;
+                align-items: center;
+                @include text3(robot, 24px, 400, 28px, $tc3 )
+            }
+        }
+
+        .bottom {
+            position: relative;
+            top: 23%;
+            left: 8%;
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .one {
+                width: 18%;
+                text-align: left;
+                @include text3(robot, 18px, 400, 28px, $tc3 )
+            }
+
+            .two {
+                width: 18%;
+                text-align: left;
+                @include text3(robot, 18px, 400, 28px, $tc3 )
+            }
+
+            .three {
+                width: 18%;
+                text-align: left;
+                @include text3(robot, 18px, 400, 28px, $tc3 )
+            }
+        }
+
+        .h21 {
+            @include for_p
+        }
+    }
+}
